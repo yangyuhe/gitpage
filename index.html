@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>hello</title>
-    <meta property="og:title" content="Do you need house?"/>
-    <meta property="og:description" content="We are the best and welcome all of you.No body like you."/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:url" content="https://yangyuhe.github.io/gitpage/"/>
-    <meta property="og:image" content="https://yangyuhe.github.io/gitpage/image1.png"/>
+    <meta property="og:title" content="Do you need house?" />
+    <meta property="og:description" content="We are the best and welcome all of you.No body like you." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://yangyuhe.github.io/gitpage/" />
+    <meta property="og:image" content="https://yangyuhe.github.io/gitpage/image1.png" />
     <meta property="og:image:width" content="1080">
     <meta property="og:image:height" content="1080">
     <meta property="fb:app_id" content="2146654772268270">
 </head>
+
 <body>
     <h1>helloworld</h1>
     <img src="./image1.png" alt="">
-    <a href="https://www.facebook.com/dialog/share?app_id=2146654772268270&display=popup&href=https://yangyuhe.github.io/gitpage/">click me</a>
+    <a
+        href="https://www.facebook.com/dialog/share?app_id=2146654772268270&display=popup&href=https://yangyuhe.github.io/gitpage/">click
+        me</a>
     <button onclick="share()">facebook</button>
     <script src="index.js"></script>
     <script>
-        window.fbAsyncInit = function() {
+        window.fbAsyncInit = function () {
             FB.init({
-            appId            : '2146654772268270',
-            autoLogAppEvents : true,
-            xfbml            : true,
-            version          : 'v3.2'
+                appId: '2146654772268270',
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v3.2'
             });
-            
+
         };
-        function share(){
-            console.log("share啦")
+        function share() {
             FB.ui({
-                method: 'share',
-                href: 'https://yangyuhe.github.io/gitpage/'
-            }, function(response){});
+                method: 'share_open_graph',
+                action_type: 'og.likes',
+                action_properties: JSON.stringify({
+                    object: 'https://yangyuhe.github.io/gitpage/',
+                })
+            }, function (response) {
+                // Debug response (optional)
+                console.log(response);
+            });
+            // console.log("share啦")
+            // FB.ui({
+            //     method: 'share',
+            //     href: 'https://yangyuhe.github.io/gitpage/'
+            // }, function(response){});
             // FB.login(function(response) {
             //     if (response.authResponse) {
             //         console.log('Welcome!  Fetching your information.... ');
@@ -50,4 +64,5 @@
     </script>
     <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 </body>
+
 </html>
