@@ -18,6 +18,7 @@
     <h1>helloworld</h1>
     <img src="./image1.png" alt="">
     <a href="https://www.facebook.com/dialog/share?app_id=2146654772268270&display=popup&href=https://yangyuhe.github.io/gitpage/">click me</a>
+    <button onclick="share()">facebook</button>
     <script src="index.js"></script>
     <script>
         window.fbAsyncInit = function() {
@@ -27,7 +28,15 @@
             xfbml            : true,
             version          : 'v3.2'
             });
+            
         };
+        function share(){
+            console.log("share啦")
+            FB.ui({
+                method: 'share',
+                href: 'https://yangyuhe.github.io/gitpage/'
+            }, function(response){});
+        }
     </script>
     <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 </body>
