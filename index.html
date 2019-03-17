@@ -19,5 +19,16 @@
     <img src="./image1.png" alt="">
     <a href="https://www.facebook.com/dialog/share?app_id=2146654772268270&display=popup&href=https://yangyuhe.github.io/gitpage/">click me</a>
     <script src="index.js"></script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            appId            : 'your-app-id',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v3.2'
+            });
+        };
+    </script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 </body>
 </html>
