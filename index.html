@@ -17,6 +17,14 @@
 
 <body>
     <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '266449034107501',
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v3.2'
+            });
+        };
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -25,6 +33,7 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
     <div class="fb-customerchat" attribution=setup_tool page_id="2107617982862094" theme_color="#fa3c4c"
         logged_in_greeting="are you ok my son?" logged_out_greeting="are you ok my son?">
     </div>
