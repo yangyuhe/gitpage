@@ -13,7 +13,6 @@
     <meta property="og:image" content="https://yangyuhe.github.io/gitpage/image1.png" />
     <meta property="og:image:width" content="1080">
     <meta property="og:image:height" content="1080">
-    <meta property="fb:app_id" content="266449034107501">
 </head>
 
 <body>
@@ -33,25 +32,7 @@
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         };
-        function share() {
-            FB.ui({
-                method: 'share_open_graph',
-                action_type: 'og.likes',
-                action_properties: JSON.stringify({
-                    object: 'https://yangyuhe.github.io/gitpage/',
-                })
-            }, function (response) {
-                // Debug response (optional)
-                console.log(response);
-            });
-        }
     </script>
-    <h1>helloworld</h1>
-    <img src="./image1.png" alt="">
-    <a
-        href="https://www.facebook.com/dialog/share?app_id=2146654772268270&display=popup&href=https://yangyuhe.github.io/gitpage/">click
-        me</a>
-    <button onclick="share()">facebook</button>
     <div class="fb-customerchat" attribution=setup_tool page_id="2107617982862094" theme_color="#fa3c4c"
         logged_in_greeting="are you ok my son?" logged_out_greeting="are you ok my son?">
     </div>
