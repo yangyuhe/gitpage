@@ -13,24 +13,10 @@
     <meta property="og:image" content="https://yangyuhe.github.io/gitpage/image1.png" />
     <meta property="og:image:width" content="1080">
     <meta property="og:image:height" content="1080">
-    <meta property="fb:app_id" content="2146654772268270">
-    <script src="index.js"></script>
+    <meta property="fb:app_id" content="266449034107501">
 </head>
 
 <body>
-    <h1>helloworld</h1>
-    <img src="./image1.png" alt="">
-    <a
-        href="https://www.facebook.com/dialog/share?app_id=2146654772268270&display=popup&href=https://yangyuhe.github.io/gitpage/">click
-        me</a>
-    <button onclick="share()">facebook</button>
-    <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="2107617982862094"
-        theme_color="#fa3c4c"
-        logged_in_greeting="are you ok my son?"
-        logged_out_greeting="are you ok my son?">
-    </div>
     <script>
         window.fbAsyncInit = function () {
             FB.init({
@@ -39,12 +25,12 @@
                 xfbml: true,
                 version: 'v3.2'
             });
-            (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-            fjs.parentNode.insertBefore(js, fjs);
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+                fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         };
         function share() {
@@ -58,24 +44,17 @@
                 // Debug response (optional)
                 console.log(response);
             });
-            // console.log("share啦")
-            // FB.ui({
-            //     method: 'share',
-            //     href: 'https://yangyuhe.github.io/gitpage/'
-            // }, function(response){});
-            // FB.login(function(response) {
-            //     if (response.authResponse) {
-            //         console.log('Welcome!  Fetching your information.... ');
-            //         FB.api('/me', function(response) {
-            //             console.log('Good to see you, ' + response.name + '.');
-            //         });
-            //     } else {
-            //         console.log('User cancelled login or did not fully authorize.');
-            //     }
-            // });
         }
     </script>
-    <!-- <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script> -->
+    <h1>helloworld</h1>
+    <img src="./image1.png" alt="">
+    <a
+        href="https://www.facebook.com/dialog/share?app_id=2146654772268270&display=popup&href=https://yangyuhe.github.io/gitpage/">click
+        me</a>
+    <button onclick="share()">facebook</button>
+    <div class="fb-customerchat" attribution=setup_tool page_id="2107617982862094" theme_color="#fa3c4c"
+        logged_in_greeting="are you ok my son?" logged_out_greeting="are you ok my son?">
+    </div>
 </body>
 
 </html>
