@@ -1,40 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>hello</title>
-    <meta property="og:title" content="Do you need house?" />
-    <meta property="og:description" content="We are the best and welcome all of you.No body like you." />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://yangyuhe.github.io/gitpage/" />
-    <meta property="og:image" content="https://yangyuhe.github.io/gitpage/image1.png" />
-    <meta property="og:image:width" content="1080">
-    <meta property="og:image:height" content="1080">
-</head>
-
-<body>
-    <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                autoLogAppEvents: true,
-                xfbml: true,
-                version: 'v3.2'
-            });
-        };
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <div class="fb-customerchat" attribution=setup_tool page_id="2107617982862094" theme_color="#fa3c4c"
-        logged_in_greeting="are you ok my son?" logged_out_greeting="are you ok my father?">
+<html>
+  
+  <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+    attribution=setup_tool
+    page_id="439117426858197">
     </div>
-</body>
-
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+            appId: '1721133738139939',
+            autoLogAppEvents : true,
+            status: true,
+            cookie: true,
+            xfbml: true,
+            version: 'v3.2'
+        });
+        FB.Event.subscribe('customerchat.dialogShow', () => console.log('dialog show'));
+        FB.Event.subscribe('auth.statusChange', (e) => console.log('statusChange:', e));
+        FB.Event.subscribe('status.change', (e) => console.log('status.Change:', e));
+    };
+      (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'messenger'));
+    </script>
+  </body>
 </html>
